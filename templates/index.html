@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Index</title>
+{% endblock head %}
+
+{% block body %}
+<h1>Salary Prediction</h1>
+<form action="/predict" method="POST">
+    <input type="text" name="exp" id="exp">Enter your experience</input><br>
+    <input type="submit" value="Prediction">Predict</input>
+</form>
+
+<h3>  {{ val["pred"] }}  </h3>
+{% endblock body %}
